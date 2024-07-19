@@ -23,7 +23,7 @@ export default function FeaturedProducts() {
       <ul className='flex flex-wrap border-2 border-gray-200 border-b-0'>
         {
           products.map((product,index) => (
-            <FeaturedProductsCard product={product} />
+            <FeaturedProductsCard product={product} key={index} />
           ))
         }
       </ul>
