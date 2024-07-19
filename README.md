@@ -22,17 +22,15 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Screenshots
 
-To learn more about Next.js, take a look at the following resources:
+![Screenshot 2024-07-19 114925](https://github.com/user-attachments/assets/ed2ef2d8-897a-4ada-8aa0-a8b82100d247)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Screenshot 2024-07-19 114949](https://github.com/user-attachments/assets/763c3969-dd11-40d8-8420-743bd8cf208e)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Screenshot 2024-07-19 115005](https://github.com/user-attachments/assets/7af1db49-5e38-4736-88a8-ead850b205ce)
 
-## Deploy on Vercel
+![Screenshot 2024-07-19 115032](https://github.com/user-attachments/assets/e09f3823-ad9c-405c-97b2-e4974fe6e921)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Screenshot 2024-07-19 115047](https://github.com/user-attachments/assets/a2636d2a-e670-4220-a41d-9286575dcce1)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
