@@ -7,7 +7,7 @@ import { FaRegHeart } from 'react-icons/fa';
 
 export default function Header() {
   return (
-    <Navbar>
+    <Navbar className='mb-1.5' maxWidth='full'>
         <NavbarBrand>
             <p className='uppercase text-2xl font-extrabold'>zeepty e-commerce</p>
         </NavbarBrand>

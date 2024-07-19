@@ -67,3 +67,22 @@
     @apply bg-background text-foreground;
   }
 }
+
+.green-gradient{
+  background: linear-gradient(90deg, rgba(34,197,94,0.5) 0%, rgba(255,255,255,1) 60%);
+}
+
+.white-gradient{
+  background: rgb(165,239,255);
+  background: linear-gradient(90deg, rgba(165,239,255,1) 0%, rgba(231,248,253,1) 50%);
+}
+
+.organic-gradient{
+  background: rgb(212,252,121);
+  background: linear-gradient(90deg, rgba(212,252,121,1) 0%, rgba(150,230,161,1) 50%);
+}
+
+.cold-gradient{
+  background: rgb(165,239,255);
+  background: linear-gradient(90deg, rgba(165,239,255,1) 0%, rgba(231,248,253,1) 50%);
+}

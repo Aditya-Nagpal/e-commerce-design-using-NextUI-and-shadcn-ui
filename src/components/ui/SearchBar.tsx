@@ -1,7 +1,6 @@
 import React from 'react'
 import { SearchIcon } from './SearchIcon'
 import { Input } from '@nextui-org/react'
-import { VscAccount } from 'react-icons/vsc'
 
 export default function SearchBar() {
   return (

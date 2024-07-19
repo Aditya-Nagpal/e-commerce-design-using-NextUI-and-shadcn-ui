@@ -1,5 +1,6 @@
 import { Button } from '@nextui-org/button'
 import Image from 'next/image'
+import { FaLeaf,FaRegSnowflake } from 'react-icons/fa'
 
 export default function NewArrivalCard({product}: any) {
   return (
@@ -7,6 +8,20 @@ export default function NewArrivalCard({product}: any) {
         <div className='w-full relative'>
             <div className='absolute top-0 left-0 rounded-xl text-xs px-2 py-1 font-extrabold text-white bg-red-500'>{product.discount}%</div>
             <Image src={product.img} alt='img' className='w-full' />
+            {
+              product.type && product.type === "organic" ? (
+                <>
+                  <p className=" absolute bottom-0 uppercase font-extrabold text-xs tracking-tight leading-5 text-green-900 mb-3 organic-gradient rounded-full py-1.5 px-3 box-content flex items-center"><FaLeaf size={14} className='mr-2' />organic</p>
+                </>
+              ) : null
+            }
+            {
+              product.type && product.type === "cold sale" ? (
+                <>
+                  <p className="absolute bottom-0 uppercase font-extrabold text-xs tracking-tight leading-5 text-sky-700 mb-3 cold-gradient rounded-full py-1.5 px-3 box-content flex items-center"><FaRegSnowflake size={14} className='mr-2' />cold sale</p>
+                </>
+              ) : null
+            }
         </div>
         <div className='min-h-40 flex flex-col justify-between'>
             <div className='flex flex-col justify-between min-h-24'>

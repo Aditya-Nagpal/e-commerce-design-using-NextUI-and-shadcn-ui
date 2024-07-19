@@ -29,7 +29,7 @@ export default function CategoryList() {
     <ul className='w-72 rounded-xl overflow-hidden border-2 border-gray-200 relative -top-12'>
         {
             categories.map((category,index) => (
-                <CategoryListItem name={category.name} icon={category.icon} key={index} index={index} size={categories.length} />
+                <CategoryListItem name={category.name} icon={category.icon} key={index} />
             ))
         }
     </ul>
