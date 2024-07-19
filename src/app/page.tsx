@@ -1,113 +1,193 @@
+'use client'
+import CategoryList from "@/components/ui/CategoryList";
+import Header from "@/components/ui/Header";
 import Image from "next/image";
+import { useEffect } from "react";
+import { MdKeyboardArrowDown } from "react-icons/md";
+import slider1 from '../assets/images/slider-01.jpg.png'
+import svg1 from '../assets/images/SVG1.png'
+import svg2 from '../assets/images/SVG2.png'
+import svg3 from '../assets/images/SVG3.png'
+import svg4 from '../assets/images/SVG4.png'
+import banner1 from '../assets/images/banner-01.jpg.png'
+import banner2 from '../assets/images/banner-02.jpg.png'
+import banner3 from '../assets/images/banner-03.jpg.png'
+import banner4 from '../assets/images/banner-04.jpg.png'
+import banner5 from '../assets/images/banner-05.jpg.png'
+import banner6 from '../assets/images/banner-06.jpg.png'
+import banner7 from '../assets/images/banner-07.jpg.png'
+import { Button } from "@nextui-org/button";
+import { FaArrowRightLong } from "react-icons/fa6";
+import NewArrivals from "@/components/ui/NewArrivals";
+import FeaturedProducts from "@/components/ui/FeaturedProducts";
 
 export default function Home() {
+  useEffect(() => {
+    if(window.location.pathname === "/"){
+      document.getElementById('home')?.classList.add('text-purple-800','border-purple-800','border-b-2');
+    }
+  },[]);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <main>
+      <Header />
 
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <section className="flex">
+        <section className="pl-[6vw] mt-12 border-t-2 border-gray-200 relative">
+          <CategoryList />
+        </section>
+        <section className="w-full">
+          <div className="border-gray-200 border-b-2 flex justify-between w-full border-b-2 border-gray-200 h-fit pr-[6vw]">
+            <ul className="flex h-12 pl-6">
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter" id="home">home <MdKeyboardArrowDown className="ml-1 text-gray-500 text-xl" /></li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">shop <MdKeyboardArrowDown className="ml-1 text-gray-500 text-xl" /></li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">fruits & vegetables</li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">beverages</li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">blog</li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">contact</li>
+            </ul>
+            <ul className="flex h-12">
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter">trending products <MdKeyboardArrowDown className="ml-1 text-gray-500 text-xl" /></li>
+              <li className="capitalize font-semibold text-base mr-7 flex items-center tracking-tighter text-red-600">almost finished&ensp;<span className="uppercase text-white bg-red-600 text-xs leading-3 rounded p-1.5">sale</span> <MdKeyboardArrowDown className="ml-1 text-gray-500 text-xl" /></li>
+            </ul>
+          </div>
+          <div className="pt-6 pl-6 pr-[6vw] h-5/6">
+            <div className="h-full relative">
+              <Image src={slider1} alt="slider-1" className="h-full absolute" />
+              <div className="relative z-10 max-w-md">
+                <p className="font-semibold text-sm tracking-tight leading-5 text-green-800 mb-3">weekend discount</p>
+                <p className="text-purple-950 font-bold text-5xl mb-4">Get the best quality products at the lowest prices</p>
+                <p className="tracking-tight text-base mb-10">We have prepared special discounts for you on grocery products. Don't miss these opportunities...</p>
+                <div className="flex">
+                  <Button color="secondary" size="lg" className="capitalize font-bold mr-4 bg-purple-800 text-sm text-white">shop now</Button>
+                  <div>
+                    <span className="tracking-tight text-red-500 text-3xl font-bold leading-7 mr-2">$27.99</span>
+                    <del className="tracking-tight leading-5 text-xl font-medium">$56.67</del>
+                    <p className="tracking-tight text-xs text-gray-400">Don't miss this limited time offer.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <section className="mb-7">
+        <ul className="flex px-[6vw]">
+          <li className="flex pb-7 border-b-2 border-gray-200">
+            <div className="mr-2">
+              <Image height={56} width={56} src={svg1} alt="svg1" />
+            </div>
+            <div>
+              <p className="font-bold tracking-tighter">Payment only online</p>
+              <p className="text-sm text-gray-500 leading-4 tracking-tighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio distinctio saepe quia.</p>
+            </div>
+          </li>
+          <li className="flex pb-7 border-b-2 border-gray-200">
+            <div className="mr-2">
+              <Image height={56} width={56} src={svg2} alt="svg2" />
+            </div>
+            <div>
+              <p className="font-bold tracking-tighter">Quality assurance</p>
+              <p className="text-sm text-gray-500 leading-4 tracking-tighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio distinctio saepe quia.</p>
+            </div>
+          </li>
+          <li className="flex pb-7 border-b-2 border-gray-200">
+            <div className="mr-2">
+              <Image height={56} width={56} src={svg3} alt="svg3" />
+            </div>
+            <div>
+              <p className="font-bold tracking-tighter">Delivery from 1 hour</p>
+              <p className="text-sm text-gray-500 leading-4 tracking-tighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio distinctio saepe quia.</p>
+            </div>
+          </li>
+          <li className="flex pb-7 border-b-2 border-gray-200">
+            <div className="mr-2">
+              <Image height={56} width={56} src={svg4} alt="svg4" />
+            </div>
+            <div>
+              <p className="font-bold tracking-tighter">New stocks and sales</p>
+              <p className="text-sm text-gray-500 leading-4 tracking-tighter">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit optio distinctio saepe quia.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <section className="px-[6vw]">
+        <ul className="flex mb-6">
+          <li className="relative w-1/3 h-56 flex items-center">
+            <div className="z-10 relative capitalize mb-2 pl-4">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold max-w-56 mb-4">quality eggs at an affordable price</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">eat on everyday</p>
+              <Button color="danger">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner1} alt="b1"className="h-full absolute top-0" />
+          </li>
+          <li className="relative w-1/3 h-56 flex items-center">
+            <div className="z-10 relative capitalize mb-2 pl-4">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold max-w-72 mb-4">Snacks that nourishes our mind and body</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">shine this morning</p>
+              <Button color="danger">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner2} alt="b2"className="h-full absolute top-0" />
+          </li>
+          <li className="relative w-1/3 h-56 flex items-center">
+            <div className="z-10 relative capitalize mb-2 pl-4">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold max-w-72 mb-4">Unbeatable quality, unbeatable prices.</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">only this week, don't miss</p>
+              <Button color="danger">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner3} alt="b3"className="h-full absolute top-0" />
+          </li>
+        </ul>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      <NewArrivals />
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <section className="px-[6vw]">
+        <ul className="flex mb-6 justify-between">
+          <li className="relative w-80 h-96 flex">
+            <div className="z-10 relative capitalize mb-2 pl-4 pt-6">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold mb-4">Provides you experienced quality products</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">Feed your family the best</p>
+              <Button color="danger" size="sm">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner4} alt="b4"className="h-full absolute top-0" />
+          </li>
+          <li className="relative w-80 h-96 flex">
+            <div className="z-10 relative capitalize mb-2 pl-4 pt-6">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold mb-4">Shopping with us for better quality and the best price</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">Only this week. Don’t miss...</p>
+              <Button color="danger" size="sm">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner5} alt="b5"className="h-full absolute top-0" />
+          </li>
+          <li className="relative w-80 h-96 flex">
+            <div className="z-10 relative capitalize mb-2 pl-4 pt-6">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold mb-4">Get the best quality products at the lowest prices</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">A different kind of grocery store</p>
+              <Button color="danger" size="sm">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner6} alt="b6"className="h-full absolute top-0" />
+          </li>
+          <li className="relative w-80 h-96 flex">
+            <div className="z-10 relative capitalize mb-2 pl-4 pt-6">
+              <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
+              <p className="text-2xl font-bold mb-4">Where you get your all favorite brands under one roof</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">Only this week. Don’t miss...</p>
+              <Button color="danger" size="sm">Shop Now&emsp;<FaArrowRightLong /></Button>
+            </div>
+            <Image src={banner7} alt="b6"className="h-full absolute top-0" />
+          </li>
+        </ul>
+      </section>
+
+      <FeaturedProducts />
     </main>
   );
 }
