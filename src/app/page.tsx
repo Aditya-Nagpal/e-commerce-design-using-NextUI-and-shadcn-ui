@@ -50,13 +50,13 @@ export default function Home() {
               <div className="relative z-10 max-w-md pt-12 pl-16 box-content">
                 <p className="font-semibold text-sm tracking-tight leading-5 text-green-900 mb-3 green-gradient w-32 rounded-md py-1 px-2 box-content">weekend discount</p>
                 <p className="text-purple-950 font-bold text-5xl mb-4">Get the best quality products at the lowest prices</p>
-                <p className="tracking-tight text-base mb-16">We have prepared special discounts for you on grocery products. Don't miss these opportunities...</p>
+                <p className="tracking-tight text-base mb-16">We have prepared special discounts for you on grocery products. Don&apos;t miss these opportunities...</p>
                 <div className="flex">
                   <Button color="secondary" size="lg" className="capitalize font-bold mr-4 bg-purple-800 text-sm text-white">shop now</Button>
                   <div>
                     <span className="tracking-tight text-red-500 text-3xl font-bold leading-7 mr-2">$27.99</span>
                     <del className="tracking-tight leading-5 text-xl font-medium">$56.67</del>
-                    <p className="tracking-tight text-xs text-gray-400">Don't miss this limited time offer.</p>
+                    <p className="tracking-tight text-xs text-gray-400">Don&apos;t miss this limited time offer.</p>
                   </div>
                 </div>
               </div>
@@ -130,7 +130,7 @@ export default function Home() {
             <div className="z-10 relative capitalize mb-2 pl-4">
               <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
               <p className="text-2xl font-bold max-w-72 mb-4">Unbeatable quality, unbeatable prices.</p>
-              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">only this week, don't miss</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">only this week, don&apos;t miss</p>
               <Button className="font-bold" color="danger">Shop Now&emsp;<FaArrowRightLong /></Button>
             </div>
             <Image src={banner3} alt="b3"className="h-full absolute top-0" />
@@ -155,7 +155,7 @@ export default function Home() {
             <div className="z-10 relative capitalize mb-2 pl-4 pt-6">
               <p className="text-red-300 font-medium tracking-tighter text-xs">only this week</p>
               <p className="text-2xl font-bold mb-4">Shopping with us for better quality and the best price</p>
-              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">Only this week. Don’t miss...</p>
+              <p className="text-sm text-gray-500 tracking-tighter leading-5 mb-5">Only this week. Don&apos;t miss...</p>
               <Button className="font-medium" color="danger" size="sm">Shop Now&emsp;<FaArrowRightLong /></Button>
             </div>
             <Image src={banner5} alt="b5"className="h-full absolute top-0" />
