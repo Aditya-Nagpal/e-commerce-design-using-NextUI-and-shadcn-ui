@@ -9,7 +9,7 @@ export default function Header() {
   return (
     <Navbar className='mb-1.5' maxWidth='full'>
         <NavbarBrand>
-            <p className='uppercase text-2xl font-extrabold'>zeepty e-commerce</p>
+            <p className='uppercase text-2xl font-extrabold'>e-commerce</p>
         </NavbarBrand>
         <NavbarContent>
           <NavbarItem>
